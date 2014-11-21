@@ -19,7 +19,7 @@ Bundle 'svenwin/vim-splitted-nerdtree'
 Bind your prefered key sequence:
 
 ```
-nmap <leader>n :call splittednerdtree#revealFile()
+nmap <leader>n :call splittednerdtree#revealFile()<CR>
 ```
 
 
