@@ -1,5 +1,5 @@
-let g:ctrlp_dont_split = 'nerdtree'
-let NERDTreeHijackNetrw=1
+let g:ctrlp_dont_split = 'NERD'
+let NERDTreeHijackNetrw = 1
 
 function! splittednerdtree#revealFile()
   try | let p = g:NERDTreePath.New(expand("%:p")) | catch | endtry
