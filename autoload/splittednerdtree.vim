@@ -4,8 +4,13 @@ let NERDTreeShowHidden = 1
 
 function! splittednerdtree#revealFile()
   try | let p = g:NERDTreePath.New(expand("%:p")) | catch | endtry
+
   edit .
-  if exists("p")
-    try | call b:NERDTreeRoot.reveal(p) | catch | endtry
-  endif
+
+  try
+    let node = b:NERDTree.root.reveal(p)
+    call NERDTreeRender()
+    call node.putCursorHere(1,0)
+  catch
+  endtry
 endfunction
